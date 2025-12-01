@@ -1,10 +1,4 @@
 ---Models in module 'base'---
-obsolete model res.partner.title
-new model ir.actions.server.history
-new model properties.base.definition
-new model properties.base.definition.mixin [abstract]
-new model res.groups.privilege
-new model server.action.history.wizard [transient]
 ---Fields in module 'base'---
 account      / res.company              / company_registry_placeholder (char): not a function anymore
 account      / res.company              / company_registry_placeholder (char): now related
@@ -127,21 +121,20 @@ NEW ir.model.constraint: base.constraint_res_device_composite_idx
 NEW ir.model.constraint: base.constraint_res_device_log_composite_idx
 NEW ir.model.constraint: base.constraint_res_device_log_revoked_idx
 NEW ir.model.constraint: base.constraint_res_device_revoked_idx
-ir.model.constraint: base.constraint_res_groups_name_uniq (changed definition: is now 'UNIQUE (privilege_id, name)' ('unique(category_id,name)'))
 DEL ir.model.constraint: base.constraint_ir_filters_name_model_uid_unique
 NEW ir.module.category: base.module_category_esg
 NEW ir.module.category: base.module_category_human_resources_referrals
 NEW ir.module.category: base.module_category_internet_of_things_(iot)
 NEW ir.module.category: base.module_category_master_data
-NEW ir.module.category: base.module_category_shipping_connectors (noupdate)
-NEW ir.module.category: base.module_category_supply_chain (noupdate)
-DEL ir.module.category: base.module_category_inventory (noupdate)
-DEL ir.module.category: base.module_category_manufacturing (noupdate)
+NEW ir.module.category: base.module_category_shipping_connectors
+NEW ir.module.category: base.module_category_supply_chain
+DEL ir.module.category: base.module_category_inventory
+DEL ir.module.category: base.module_category_manufacturing
 DEL ir.module.category: base.module_category_usability
 DEL ir.module.category: base.module_category_user_type
-NEW ir.rule: base.properties_base_definition_rule_admin (noupdate)
-NEW ir.rule: base.res_users_rule_portal (noupdate)
-DEL ir.rule: base.ir_filters_delete_own_rule (noupdate)
+NEW ir.rule: base.properties_base_definition_rule_admin
+NEW ir.rule: base.res_users_rule_portal
+DEL ir.rule: base.ir_filters_delete_own_rule
 NEW ir.ui.menu: base.menu_action_res_groups_privilege
 NEW ir.ui.view: base.ir_filters_view_edit_form
 NEW ir.ui.view: base.res_users_apikeys_view_kanban
@@ -155,9 +148,9 @@ DEL ir.ui.view: base.res_partner_view_form_private
 DEL ir.ui.view: base.user_groups_view
 DEL ir.ui.view: base.view_partner_title_form
 DEL ir.ui.view: base.view_partner_title_tree
-NEW res.country: base.xi (noupdate)
-NEW res.country.group: base.dom-tom [renamed from l10n_fr module] (noupdate) (noupdate switched)
-NEW res.country.group: base.europe_prefix (noupdate)
+NEW res.country: base.xi
+NEW res.country.group: base.dom-tom [renamed from l10n_fr module]
+NEW res.country.group: base.europe_prefix
 NEW res.country.state: base.state_at_1 [renamed from l10n_at module]
 NEW res.country.state: base.state_at_2 [renamed from l10n_at module]
 NEW res.country.state: base.state_at_3 [renamed from l10n_at module]
@@ -332,12 +325,12 @@ DEL res.country.state: base.state_vn_VN-67
 DEL res.country.state: base.state_vn_VN-70
 DEL res.country.state: base.state_vn_VN-72
 DEL res.country.state: base.state_vn_VN-73
-NEW res.groups: base.default_user_group (noupdate)
+NEW res.groups: base.default_user_group
 NEW res.groups.privilege: base.res_groups_privilege_contact
 NEW res.groups.privilege: base.res_groups_privilege_export
-DEL res.partner.title: base.res_partner_title_doctor (noupdate)
-DEL res.partner.title: base.res_partner_title_madam (noupdate)
-DEL res.partner.title: base.res_partner_title_miss (noupdate)
-DEL res.partner.title: base.res_partner_title_mister (noupdate)
-DEL res.partner.title: base.res_partner_title_prof (noupdate)
-DEL res.users: base.default_user (noupdate)
+DEL res.partner.title: base.res_partner_title_doctor
+DEL res.partner.title: base.res_partner_title_madam
+DEL res.partner.title: base.res_partner_title_miss
+DEL res.partner.title: base.res_partner_title_mister
+DEL res.partner.title: base.res_partner_title_prof
+DEL res.users: base.default_user
