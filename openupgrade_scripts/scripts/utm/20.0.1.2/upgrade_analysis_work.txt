@@ -1,0 +1,52 @@
+---Models in module 'utm'---
+obsolete model utm.source.mixin [abstract]
+
+# NOTHING TO DO: abstract
+
+---Fields in module 'utm'---
+---XML records in module 'utm'---
+NEW ir.access: utm.access_utm_campaign_system
+NEW ir.access: utm.access_utm_campaign_user
+NEW ir.access: utm.access_utm_medium_system
+NEW ir.access: utm.access_utm_medium_user
+NEW ir.access: utm.access_utm_source_system
+NEW ir.access: utm.access_utm_source_user
+NEW ir.access: utm.access_utm_stage_system
+NEW ir.access: utm.access_utm_stage_user
+NEW ir.access: utm.access_utm_tag_system
+NEW ir.access: utm.access_utm_tag_user
+DEL ir.model.access: utm.access_utm_campaign_system
+DEL ir.model.access: utm.access_utm_campaign_user
+DEL ir.model.access: utm.access_utm_medium_system
+DEL ir.model.access: utm.access_utm_medium_user
+DEL ir.model.access: utm.access_utm_source_system
+DEL ir.model.access: utm.access_utm_source_user
+DEL ir.model.access: utm.access_utm_stage_system
+DEL ir.model.access: utm.access_utm_stage_user
+DEL ir.model.access: utm.access_utm_tag_system
+DEL ir.model.access: utm.access_utm_tag_user
+
+# NOTHING TO DO: handled in base
+
+NEW utm.source: utm.utm_source_livechat [renamed from crm_livechat module] (noupdate)
+
+# DONE: renamed from crm_livechat in pre-migration
+
+NEW utm.medium: utm.utm_medium_messaging (noupdate)
+NEW utm.medium: utm.utm_medium_social_media (noupdate)
+NEW utm.source: utm.utm_source_google (noupdate)
+NEW utm.source: utm.utm_source_instagram (noupdate)
+NEW utm.source: utm.utm_source_survey (noupdate)
+NEW utm.source: utm.utm_source_youtube (noupdate)
+
+# DONE: linked to existing records with the same name in pre-migration
+
+DEL utm.medium: utm.utm_medium_banner (noupdate)
+DEL utm.medium: utm.utm_medium_facebook (noupdate)
+DEL utm.medium: utm.utm_medium_google_adwords (noupdate)
+DEL utm.medium: utm.utm_medium_linkedin (noupdate)
+DEL utm.medium: utm.utm_medium_television (noupdate)
+DEL utm.medium: utm.utm_medium_twitter (noupdate)
+DEL utm.source: utm.utm_source_search_engine (noupdate)
+
+# NOTHING TO DO: kept, may be referenced by existing records
