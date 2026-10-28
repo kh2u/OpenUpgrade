@@ -1,0 +1,21 @@
+---Models in module 'base_address_extended'---
+---Fields in module 'base_address_extended'---
+---XML records in module 'base_address_extended'---
+DEL ir.ui.menu: base_address_extended.menu_res_city [renamed to contacts module]
+
+# NOTHING TO DO: renamed in contacts
+
+NEW ir.access: base_address_extended.access_res_city_group_all
+NEW ir.access: base_address_extended.access_res_city_group_user
+DEL ir.model.access: base_address_extended.access_res_city_group_all
+DEL ir.model.access: base_address_extended.access_res_city_group_user
+
+# NOTHING TO DO: handled in base
+
+NEW ir.ui.view: base_address_extended.res_city_view_form
+
+# NOTHING TO DO: new feature
+
+DEL ir.ui.view: base_address_extended.address_street_extended_form
+
+# NOTHING TO DO: noupdate=0 ir stuff
