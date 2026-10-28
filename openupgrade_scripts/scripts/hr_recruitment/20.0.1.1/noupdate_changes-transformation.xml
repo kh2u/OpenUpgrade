@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- name and score of degree_graduate are changed in post-migration if it is
+    not customized and the new name is not taken -->
+    <xpath expr="./record[@id='degree_graduate']/field[@name='name']" position="replace" />
+    <xpath expr="./record[@id='degree_graduate']/field[@name='score']" position="replace" />
+</odoo>
