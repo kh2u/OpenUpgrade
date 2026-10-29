@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- the url of menu_home is not a field anymore, the analysis lists it as empty
+    and loading it would disconnect the menu from the homepage -->
+    <xpath expr="./record[@id='menu_home']" position="replace" />
+</odoo>
