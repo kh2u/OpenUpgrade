@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- the default cover of the blog may have been changed, don't overwrite it:
+    the path of the old default cover is converted by the end-migration of
+    website, and looks the same -->
+    <record id="blog_blog_1" position="replace" />
+</odoo>
