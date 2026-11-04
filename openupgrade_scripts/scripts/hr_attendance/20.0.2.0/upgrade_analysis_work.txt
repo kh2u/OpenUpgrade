@@ -128,6 +128,7 @@ DEL hr.attendance.overtime.ruleset: hr_attendance.l10n_ae_hr_attendance_overtime
 # NOTHING TO DO: will be cleaned by database_cleanup
 
 NEW ir.access: hr_attendance.access_hr_time_rule_attendance_admin
+NEW ir.access: hr_attendance.access_hr_work_entry_type_attendance_reader
 NEW ir.access: hr_attendance.hr_attendance_rule_attendance_admin
 NEW ir.access: hr_attendance.hr_attendance_rule_attendance_manager_restrict
 NEW ir.access: hr_attendance.hr_attendance_rule_attendance_own
@@ -160,6 +161,7 @@ DEL ir.rule: hr_attendance.hr_attendance_rule_employee_company (noupdate)
 NEW ir.actions.act_window: hr_attendance.hr_attendance_my_action
 DEL ir.actions.act_window: hr_attendance.hr_attendance_overtime_rule_action
 DEL ir.actions.act_window: hr_attendance.hr_attendance_overtime_ruleset_action
+NEW ir.actions.server: hr_attendance.action_attendance_employee_view_access
 NEW ir.actions.server: hr_attendance.action_attendance_refuse
 NEW ir.actions.server: hr_attendance.action_attendance_validate
 NEW ir.cron: hr_attendance.hr_attendance_day_undertime_rules_cron
